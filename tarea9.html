@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros recomendados para leer en cualquier momento</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #dfe0e2;
+            color: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px 40px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: 3.2rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.06em;
+            color: #111;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .book-menu {
+            display: flex;
+            align-items: flex-end;
+            gap: 18px;
+            margin: 0 0 18px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(0,0,0,0.18);
+        }
+
+        .book-link {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .book-link img {
+            display: block;
+            width: 212px;
+            height: 295px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            background: #fff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .book-link:hover img,
+        .book-link:focus img {
+            transform: scale(1.03);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+        }
+
+        .book-link .label {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 8px 10px;
+            background: rgba(0,0,0,0.62);
+            color: #fff;
+            font-size: 0.9rem;
+            line-height: 1.3;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            text-align: center;
+        }
+
+        .book-link:hover .label,
+        .book-link:focus .label {
+            opacity: 1;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin: 0 0 22px;
+            max-width: 1180px;
+        }
+
+        .entry {
+            margin: 0 0 36px;
+            padding-top: 14px;
+        }
+
+        .entry h2 {
+            margin: 0 0 8px;
+            font-size: 2rem;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #111;
+        }
+
+        .entry h2 em {
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .year {
+            margin: 0 0 12px;
+            color: #1a1a1a;
+            font-size: 0.9rem;
+        }
+
+        .entry-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .thumb {
+            width: 110px;
+            height: 140px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            border: 1px solid rgba(0,0,0,0.15);
+            background: #fff;
+            flex-shrink: 0;
+        }
+
+        .entry p {
+            margin: 0 0 12px;
+            font-size: 1.05rem;
+            line-height: 1.52;
+            max-width: 1180px;
+        }
+
+        .entry strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            h1 { font-size: 2.4rem; }
+            .book-menu { flex-wrap: wrap; }
+            .book-link img { width: 160px; height: 240px; }
+            .entry h2 { font-size: 1.6rem; }
+            .entry-content { flex-direction: column; }
+            .thumb { width: 90px; height: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>Libros recomendados para leer en cualquier momento</h1>
+
+        <nav class="book-menu" aria-label="Menú de libros">
+            <a class="book-link" href="#paul-auster" aria-label="Ir a 4 3 2 1 de Paul Auster">
+                <img src="4321paul_auster.jpg" alt="Portada de 4 3 2 1">
+                <span class="label">4 3 2 1<br>Paul Auster</span>
+            </a>
+            <a class="book-link" href="#jane-austen" aria-label="Ir a Orgullo y prejuicio de Jane Austen">
+                <img src="orgulloyprejuicio.jpg" alt="Portada de Orgullo y prejuicio">
+                <span class="label">Orgullo y prejuicio<br>Jane Austen</span>
+            </a>
+            <a class="book-link" href="#art-spiegelman" aria-label="Ir a Maus de Art Spiegelman">
+                <img src="maus.jpg" alt="Portada de Maus">
+                <span class="label">Maus<br>Art Spiegelman</span>
+            </a>
+        </nav>
+
+        <p class="intro">Son títulos espléndidos de los que puedes disfrutar en las largas tardes de verano, entre trenes y aviones, disfrutando de un buen insomnio ... Nuestro mix de novelas actuales y clásicos atemporales.</p>
+
+        <article id="paul-auster" class="entry">
+            <h2>4 3 2 1 <em>(2017)</em> &gt;&gt; de Paul Auster</h2>
+            <p class="year">2017 - Ed. Seix Barral</p>
+
+            <div class="entry-content">
+                <img class="thumb" src="4321paul_auster.jpg" alt="Portada de 4 3 2 1">
+                <div>
+                    <p>La obra de Auster da para todas las estaciones: elegiría la trilogía de Nueva York para la primavera, Sunset Park para el verano, Brooklyn Follies para el otoño...</p>
+                    <p>Resérvate cualquier momento para <strong>4 3 2 1</strong>, un clásico instantáneo. Porque en las casi mil páginas retoma las estructuras juguetonas de sus primeras novelas -en este caso contando la vida de una misma persona, que se parece mucho al propio Auster, con cuatro destinos diferentes- pero esta vez el fondo tiene más potencia que el artificio. Su tratado definitivo sobre la juventud, el amor y el arte.</p>
+                </div>
+            </div>
+        </article>
+
+        <article id="jane-austen" class="entry">
+            <h2>Orgullo y prejuicio <em>(1813)</em> &gt;&gt; de Jane Austen</h2>
+            <p class="year">2004 - Alianza Editorial</p>
+
+            <div class="entry-content">
+                <img class="thumb" src="orgulloyprejuicio.jpg" alt="Portada de Orgullo y prejuicio">
+                <div>
+                    <p>Si piensas que es una novela para mujeres, pues es verdad, es maravillosa para mujeres. Exactamente igual de maravillosa que para hombres.</p>
+                    <p>Con apenas 20 años, Austen se marcó uno de los retratos más vigorosos sobre el deseo y su contención, sobre el amor y su encaje social, sobre el honor y su imposible realización completa. Química pura, un millón de veces imitada e inimitable a la vez, que transcurre en la recurrente campiña londinense de principios del siglo XIX.</p>
+                </div>
+            </div>
+        </article>
+
+        <article id="art-spiegelman" class="entry">
+            <h2>Maus: Relato de un superviviente <em>(1991)</em> &gt;&gt; de Art Spiegelman</h2>
+            <p class="year">2012 - Random House</p>
+
+            <div class="entry-content">
+                <img class="thumb" src="maus.jpg" alt="Portada de Maus">
+                <div>
+                    <p>La primera regla del club de la lucha es no hablar del club de la lucha.</p>
+                    <p>Un puñado de jóvenes oficinistas, abrumados por el estrés y sus respectivas paranoias, quedan todos los fines de semana a pelearse entre sí a lo bestia. Una novela cáustica e hilarante con un final insospechado. Si te gustó la película, espera a que te leas la novela.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
